@@ -1,28 +1,26 @@
 * {
     text-align: center;
     margin: 0;
-}
-
-.sizeCity {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    padding: 0;
 }
 
 .hide {
     display: none;
 }
 
-button {
-    color: blue;
+.sizeCity {
     position: absolute;
-    top: 450px;
-    width: 150px;
-    height: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    position: relative;
+    top: 200;
 }
 
 .lampPosition {
-    position: absolute;
-    top: 200px;
-    left: 760px;
+    position: relative;
+    top: 200;
 }

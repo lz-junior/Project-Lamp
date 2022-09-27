@@ -10,22 +10,26 @@
 </head>
 <body>
     
-    <img src="image/day.jpg" class="sizeCity">
+    <img src="image/day.jpg" id="cityDay" class="sizeCity hide">
 
-    <img src="image/night.jpg" class="sizeCity hide">
+    <img src="image/night.jpg" id="cityNight" class="sizeCity">
 
     
     <div>
-        <div id="lampOn" class="lampPosition">
+        <div id="lampOn" class="lampPosition hide">
             <img src="image/lampada-acesa.png">
         </div>
-        <div id="lampOff" class="lampPosition hide">
+        
+        <div id="lampOff" class="lampPosition">
             <img src="image/lampada-apagada.png">
         </div>
+
         <div id="lampBroken" class="lampPosition hide">
             <img src="image/lampada-quebrada.png">
         </div>
-        <button type="button">Acender</button>
+        <button id="btnOn" type="button" class="btn">Acender</button>
+        <button id="btnOff" type="button" class="btn">Apagar</button>
+        <button id="btnBroken" type="button" class="btn hide">Concertar</button>
     </div>
 </body>
 </html>
