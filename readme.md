@@ -1,0 +1,1 @@
+Para escolher as imagens de dia e noite, deverá ser colocado no JavaScript a adição de uma class .hide que irá esconder as imagens na hora correta.

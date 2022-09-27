@@ -1,0 +1,28 @@
+* {
+    text-align: center;
+    margin: 0;
+}
+
+.sizeCity {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    color: blue;
+    position: absolute;
+    top: 450px;
+    width: 150px;
+    height: 50px;
+}
+
+.lampPosition {
+    position: absolute;
+    top: 200px;
+    left: 760px;
+}
