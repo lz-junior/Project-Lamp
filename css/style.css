@@ -17,7 +17,23 @@
 
 .btn {
     position: relative;
-    top: 200;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(36, 36, 36, 0.7);
+    border-radius: 7px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: darkblue;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#btnOn:hover {
+    color: rgb(109, 107, 0);
 }
 
 .lampPosition {
