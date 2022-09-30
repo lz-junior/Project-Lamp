@@ -1,4 +1,4 @@
-const btn = document.getElementById("btnOn");
+const btnOn = document.getElementById("btnOn");
 const btnOff = document.getElementById("btnOff");
 const btnBroken = document.getElementById("btnBroken");
 const selectCity = document.getElementById("selectCity");
@@ -12,8 +12,10 @@ const cityNight = document.getElementById("cityNight");
 const cityDayBrazil = document.getElementById("cityDayBrazil");
 const cityNightBrazil = document.getElementById("cityNightBrazil");
 
-var cd = cityDayBrazil;
-var cn = cityNightBrazil;
+var backgroundMain = window.document.body;
+
+var cd;
+var cn;
 var lac = lampOn;
 var lap = lampOff;
 var lq = lampBroken;
@@ -23,15 +25,24 @@ var lq = lampBroken;
 selectCity.addEventListener("change", ()=>{
 
     if (selectCity.value == 'newyork') {
+
         selectCity.style.color = 'red';
-        changingBackground(cityDay, cityNight)
+        changeCity(cityDay, cityNight)
+
     } else if (selectCity.value == 'brazil') {
+
         selectCity.style.color = 'green';
-        changingBackground(cityDayBrazil, cityNightBrazil)
+        changeCity(cityDayBrazil, cityNightBrazil)
+
     };
 });
 
-
+function changeCity(cidadeDia, cidadeNoite) {
+    backgroundMain.style.background = 'none'
+    cd = cidadeDia;
+    cn = cidadeNoite;
+    cn.classList.remove("hide");
+};
 
 // Events
 // a = cidade dia
@@ -39,29 +50,28 @@ selectCity.addEventListener("change", ()=>{
 // c = lamp acesa
 // d = lamp apagada
 // e = lamp quebrada
-var on = btn.addEventListener("click", (e)=> {
+btnOn.addEventListener("click", (e)=> {
     e.preventDefault();
-    lightOn(cd, cn, lac, lap, lq);
+    lamOn(lac, lap, lq);
 });
-
-var off = btnOff.addEventListener("click", (e)=> {
+btnOff.addEventListener("click", (e)=> {
     e.preventDefault();
-    lightOff(cd, cn, lac, lap, lq);
+    lamOff(lac, lap, lq);
 });
-
-lampOff.addEventListener("click", (e)=> {
-    e.preventDefault();
-    changeLamp(cd, cn, lac, lap, lq);
-});
-
-lampOn.addEventListener("click", (e)=> {
-    e.preventDefault();
-    changeLamp(cd, cn, lac, lap, lq);
-});
-
 btnBroken.addEventListener("click", (e)=> {
     e.preventDefault();
-    lightOff(cd, cn, lac, lap, lq);
+    lamOff(lac, lap, lq);
+    BtnLamp();
+});
+lampOn.addEventListener("click", (e)=> {
+    e.preventDefault()
+    lamBroken(lac, lap, lq);
+    changeBtnBroken();
+});
+lampOff.addEventListener("click", (e)=> {
+    e.preventDefault()
+    lamBroken(lac, lap, lq);
+    changeBtnBroken();
 });
 
 
@@ -71,38 +81,76 @@ btnBroken.addEventListener("click", (e)=> {
 // c = lamp acesa
 // d = lamp apagada
 // e = lamp quebrada
-function lightOn(a, b, c, d, e) {
-    d.classList.add("hide");
+function lamOn(c, d, e) {
     c.classList.remove("hide");
-    b.classList.add("hide");
-    a.classList.remove("hide");
+    d.classList.add("hide");
     e.classList.add("hide");
 };
-
-function lightOff(a, b, c, d, e) {
-    d.classList.remove("hide");
+function lamOff(c, d, e) {
     c.classList.add("hide");
-    b.classList.remove("hide");
-    a.classList.add("hide");
+    d.classList.remove("hide");
     e.classList.add("hide");
-    btn.classList.remove("hide");
+};
+function lamBroken(c, d, e) {
+    c.classList.add("hide");
+    d.classList.add("hide");
+    e.classList.remove("hide");
+};
+function CD(a, b) {
+    a.classList.remove("hide");
+    b.classList.add("hide");
+};
+function CN(a, b) {
+    a.classList.add("hide");
+    b.classList.remove("hide");
+};
+function changeBtnBroken() {
+    btnOn.classList.add("hide");
+    btnOff.classList.add("hide");
+    btnBroken.classList.remove("hide");
+};
+function BtnLamp() {
+    btnOn.classList.remove("hide");
     btnOff.classList.remove("hide");
     btnBroken.classList.add("hide");
 };
 
-function changeLamp(a, b, c, d, e) {
-    c.classList.add("hide");
-    d.classList.add("hide");
-    e.classList.remove("hide");
-    a.classList.add("hide");
-    b.classList.remove("hide");
-    btn.classList.add("hide");
-    btnOff.classList.add("hide");
-    btnBroken.classList.remove("hide");
-};
 
-function changingBackground(cidadeDia, cidadeNoite) {
-    cd = cidadeDia;
-    cn = cidadeNoite;
-};
+
+
+
+
+
+
+// function lightOn(a, b, c, d, e) {
+//     d.classList.add("hide");
+//     c.classList.remove("hide");
+//     b.classList.add("hide");
+//     a.classList.remove("hide");
+//     e.classList.add("hide");
+// };
+
+// function lightOff(a, b, c, d, e) {
+//     d.classList.remove("hide");
+//     c.classList.add("hide");
+//     b.classList.remove("hide");
+//     a.classList.add("hide");
+//     e.classList.add("hide");
+//     btn.classList.remove("hide");
+//     btnOff.classList.remove("hide");
+//     btnBroken.classList.add("hide");
+// };
+
+// function changeLamp(a, b, c, d, e) {
+//     c.classList.add("hide");
+//     d.classList.add("hide");
+//     e.classList.remove("hide");
+//     a.classList.add("hide");
+//     b.classList.remove("hide");
+//     btn.classList.add("hide");
+//     btnOff.classList.add("hide");
+//     btnBroken.classList.remove("hide");
+// };
+
+
 

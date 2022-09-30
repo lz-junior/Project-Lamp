@@ -11,12 +11,12 @@
 <body>
     
     <img src="image/riodejaneiro-day.jpg" id="cityDayBrazil" class="sizeCity hide">
-    <img src="image/riodejaneiro-night.jpg" id="cityNightBrazil" class="sizeCity ">
+    <img src="image/riodejaneiro-night.jpg" id="cityNightBrazil" class="sizeCity hide">
     
     <img src="image/day.jpg" id="cityDay" class="sizeCity hide">
-    <img src="image/night.jpg" id="cityNight" class="sizeCity">
+    <img src="image/night.jpg" id="cityNight" class="sizeCity hide">
 
-
+    <!-- <img src="image/main-background.gif" id="background-main"> -->
     
     <div>
         <div id="lampOn" class="lampPosition hide">
@@ -30,15 +30,15 @@
         <div id="lampBroken" class="lampPosition hide">
             <img src="image/lampada-quebrada.png">
         </div>
-        <button id="btnOn" type="button" class="btn">Acender</button>
-        <button id="btnOff" type="button" class="btn">Apagar</button>
+        <button id="btnOn" type="button" class="btn">On</button>
+        <button id="btnOff" type="button" class="btn">Off</button>
         <button id="btnBroken" type="button" class="btn hide">Consertar</button>
     </div>
 
     <div id="select">
         <h4>Change Background</h4>
         <select name="selectCity" id="selectCity" class="btn">
-            <!-- <option selected disabled value="change">Change</option> -->
+            <option selected disabled class="hide" value="change">Change</option>
             <option value="newyork">New York</option>
             <option value="brazil">Brazil</option>
         </select>
