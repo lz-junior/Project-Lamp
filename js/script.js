@@ -1,3 +1,11 @@
+
+var teste = 'teste'
+
+const backgrounds = [
+    'image/riodejaneiro-day.jpg',
+];
+
+
 const btnOn = document.getElementById("btnOn");
 const btnOff = document.getElementById("btnOff");
 const btnBroken = document.getElementById("btnBroken");
@@ -24,18 +32,22 @@ funcionamentoLampada()
 
 // Change City
 selectCity.addEventListener("change", ()=>{
-
+    
     switch (selectCity.value) {
 
         case 'newyork':
-            cityDayBrazil.classList.add("hide");
-            cityNightBrazil.classList.add("hide");
-            selectCity.style.color = 'red';
-            CN(cityDay, cityNight);
-            funcionamentoLampada(cityDay, cityNight)
-            lamOff(lac, lap, lq);
-            BtnLamp()
+
+            document.querySelector('body').style.backgroundImage = `url(${backgrounds[0]})`;
+
+            // cityDayBrazil.classList.add("hide");
+            // cityNightBrazil.classList.add("hide");
+            // selectCity.style.color = 'red';
+            // CN(cityDay, cityNight);
+            // funcionamentoLampada(cityDay, cityNight)
+            // lamOff(lac, lap, lq);
+            // BtnLamp()
             break
+
         case 'brazil':
             cityDay.classList.add("hide");
             cityNight.classList.add("hide");
@@ -45,6 +57,7 @@ selectCity.addEventListener("change", ()=>{
             lamOff(lac, lap, lq);
             BtnLamp()
             break
+
         default:
             break
     };
@@ -122,7 +135,7 @@ function CD(a, b) {
     b.classList.add("hide");
 };
 function CN(a, b) {
-    backgroundMain.style.background = 'none'
+
     a.classList.add("hide");
     b.classList.remove("hide");
 };
