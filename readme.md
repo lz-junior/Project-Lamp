@@ -7,3 +7,8 @@ Itens para corrigir:
 • Ao iniciar a interação com "Brazil", tudo está normal. Ao trocar para "New York" também fica normal, o problema volta quando tentamos novamente voltar ao "Brazil".
 
 • Ao iniciar ou selecionar a opção "New York", e depois ir para "Brazil", quebrando a lâmpada a imagem volta para "New York". Isso também acontece com o botão Off.
+
+
+
+Para troca de imagens 
+https://www.horadecodar.com.br/2020/10/21/como-alterar-o-src-de-uma-imagem-com-javascript/

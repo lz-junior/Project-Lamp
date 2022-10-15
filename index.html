@@ -11,28 +11,27 @@
 <body>
     
     <div>
-        <!-- <div id="lampOn" class="lampPosition hide">
-            <img src="image/lampada-acesa.png">
-        </div>
-        
-        <div id="lampOff" class="lampPosition">
-            <img src="image/lampada-apagada.png">
-        </div>
+        <img src="image/background-main.gif" id="background">
+    </div>
 
-        <div id="lampBroken" class="lampPosition hide">
-            <img src="image/lampada-quebrada.png">
-        </div> -->
-        <button id="btnOn" type="button" class="btn">On</button>
-        <button id="btnOff" type="button" class="btn">Off</button>
-        <button id="btnBroken" type="button" class="btn hide">Consertar</button>
+    <div>
+        <img src="image/lampada-apagada.png" id="lamps">
+    </div>
+
+    <div>
+        <button id="btnOn" type="button" class="btn" onclick="btnOn()">On</button>
+        <button id="btnOff" type="button" class="btn" onclick="btnOff()">Off</button>
+        <button id="btnBroken" type="button" class="btn hide" onclick="btnBroken()">Consertar</button>
     </div>
 
     <div id="select">
         <h4>Change Background</h4>
         <select name="selectCity" id="selectCity" class="btn">
             <option selected disabled class="hide" value="change">Change</option>
-            <option value="newyork">New York</option>
-            <option value="brazil">Brazil</option>
+            <option value="bahia">Bahia</option>
+            <option value="minasgerais">Minas Gerais</option>
+            <option value="riodejaneiro">Rio de Janeiro</option>
+            <option value="saopaulo">São Paulo</option>
         </select>
     </div>
 </body>

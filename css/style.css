@@ -8,12 +8,16 @@
     display: none;
 }
 
-
-.sizeCity {
+#background {
     position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#lamps {
+    position: relative;
+    margin-top: 100px;
 }
 
 .btn {
@@ -44,6 +48,7 @@
 }
 
 #select {
+    margin-top: -50px;
     position: relative;
 }
 
