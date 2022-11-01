@@ -137,3 +137,15 @@ function day_city() {
 
 };
 //==========================================================
+
+
+// FUNCIONAMENTO DO MODAL
+function modal() {
+    let modal = document.getElementById("backgroundModal");
+    modal.style.display = 'flex';
+};
+
+function btnCancel() {
+    let modal = document.getElementById("backgroundModal");
+    modal.style.display = 'none';
+};

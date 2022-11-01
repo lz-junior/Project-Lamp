@@ -1,14 +1,9 @@
-Itens para corrigir:
 
-• Na página inicial ao quebrar ou apagar a lâmpada a imagem está sumindo.
-
-• Iniciando a interação com a opção "New York", tudo ocorre bem, mas mudando para "Brazil", ao acender a lâmpada a cidade troca para "New York", mesmo estando selecionado "Brazil".
-
-• Ao iniciar a interação com "Brazil", tudo está normal. Ao trocar para "New York" também fica normal, o problema volta quando tentamos novamente voltar ao "Brazil".
-
-• Ao iniciar ou selecionar a opção "New York", e depois ir para "Brazil", quebrando a lâmpada a imagem volta para "New York". Isso também acontece com o botão Off.
+Projeto atualizado!!!
 
 
+Itens para adicionar:
 
-Para troca de imagens 
-https://www.horadecodar.com.br/2020/10/21/como-alterar-o-src-de-uma-imagem-com-javascript/
+• Fazer um botão para o usuário adicionar mais imagens.
+• Fazer uma janela suspensa sobre a página com um input para adicionar imagem, nome da imagem.
+• Fazer com que o nome escolhido pelo usuário seja colocando no select e adicionar um option com value com esse nome. Garantir que esse nome não tem letras maiusculas, espaços e caracteres especiais. 

@@ -1,3 +1,4 @@
+/* GERAL */
 * {
     text-align: center;
     margin: 0;
@@ -8,18 +9,29 @@
     display: none;
 }
 
+
+/* ===== BACKGROUND ===== */
 .background {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 100%;
     height: 100%;
 }
 
+
+/* ===== LAMPADAS ===== */
 #lamps {
     position: relative;
     margin-top: 100px;
 }
 
+.lampPosition {
+    position: relative;
+    top: 200;
+}
+
+
+/* ===== BOTÕES ===== */
 .btn {
     position: relative;
     padding: 10px;
@@ -42,18 +54,59 @@
     color: rgb(109, 107, 0);
 }
 
-.lampPosition {
-    position: relative;
-    top: 200;
-}
 
+/* ===== TAG: SELECT ===== */
 #select {
-    margin-top: -50px;
     position: relative;
+    margin-top: -50px;
 }
 
 #select h4 {
     color: beige;
     margin-top: 150px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* ===== MODAL ===== */
+#backgroundModal {
+    position: absolute;
+     top: 0px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+     top: 25%;
+     left: 30%;
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+#modal h4 {
+    color: rgb(4, 4, 49);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+}
+
+.btnCancel {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(160, 12, 12);
+}
+
+.btnCancel:hover {
+    cursor: pointer;
+    background-color: rgb(rgb(102, 13, 13), green, blue);
 }
