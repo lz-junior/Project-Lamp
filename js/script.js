@@ -27,6 +27,7 @@ const selectCity = document.getElementById("selectCity");
 night_city();
 
 
+//==========================================================
 // FUNCIONAMENTO DA LÂMPADA
 function btnOn() {
     lamp.setAttribute('src', lamps.lamp_on);
@@ -57,9 +58,9 @@ lamp.addEventListener("click", ()=> {
 
     night_city();
 });
+
+
 //==========================================================
-
-
 // TROCA DA NOITE PARA DIA
 function night_city() {
 
@@ -136,9 +137,9 @@ function day_city() {
     };
 
 };
+
+
 //==========================================================
-
-
 // FUNCIONAMENTO DO MODAL
 function modal() {
     let modal = document.getElementById("backgroundModal");
@@ -149,3 +150,32 @@ function btnCancel() {
     let modal = document.getElementById("backgroundModal");
     modal.style.display = 'none';
 };
+
+function btnAdd() {
+    var nome_digitado = document.querySelector("#nameImage").value;
+    window.alert("O nome é " + nome_digitado);
+};
+
+
+//==========================================================
+// IMPEDINDO A DIGITAÇÃO DE CARACTERES ESPECIAIS
+const nameImage = document.querySelector("#nameImage");
+nameImage.addEventListener("keypress", function(e) {
+    if (!checkChar(e)) {
+        e.preventDefault();
+    };
+});
+
+function checkChar(e) {
+    const char = String.fromCharCode(e.keyCode);
+    const pattern = '[a-z]';
+
+    if (char.match(pattern)) {
+        return true;
+    };
+};
+
+
+// ADICIONANDO NOVA IMAGEM
+//==========================================================
+// 
