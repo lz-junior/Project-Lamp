@@ -1,24 +1,19 @@
 // ====================< BACKGROUNS >====================
-const backgrounds = [
+var backgrounds = [
     {
         ba: "image/ba-day.jpg"
     },{
         mg: "image/mg-day.jpg"
     },{
-        pr: "image/pr-day.jpg"
-    },{
         rj: "image/rj-day.jpg"
+    },{
+        pr: "image/pr-day.jpg"
     },{
         sp: "image/sp-day.jpg"
     }
 ];
-
-var backgroundsAdds = [];
-
 var background_filter = document.getElementById("background_filter");
 var background = document.getElementById("background");
-
-
 
 
 
@@ -63,14 +58,10 @@ lamp.addEventListener("click", ()=> {
 
 
 
-
-
 // ====================< BOTOES >====================
 const btnOn_id = document.getElementById("btnOn");
 const btnOff_id = document.getElementById("btnOff");
 const btnBroken_id = document.getElementById("btnBroken");
-
-
 
 
 
@@ -79,69 +70,21 @@ const selectCity = document.getElementById("selectCity");
 
 
 
-
-
 // ====================< MODAL >====================
-const modal = document.getElementById("backgroundModal");
-
-function abrirModal() {
+function modal() {
+    let modal = document.getElementById("backgroundModal");
     modal.style.display = 'flex';
 };
 
 function btnCancel() {
+    let modal = document.getElementById("backgroundModal");
     modal.style.display = 'none';
 };
 
-
-
-
-
-
-
-
-
-
-
-
-// ADICIONANDO BACKGROUND E NOME
-var newBackground = document.querySelector("#inputFile");
-var name_newBackground = document.querySelector("#nameImage");
-
 function btnAdd() {
-    
-    if (newBackground.value == "") {
-        window.alert("É necessário adicionar uma imagem para continuar!")
-    } else if (name_newBackground.value == "") {
-        window.alert("É necessário adicionar um nome para continuar!")
-    } else {
-        backgroundsAdds.push(newBackground.value);
-
-        selectCity.options[selectCity.options.length] = new Option(name_newBackground.value, newBackground.value);
-
-        modal.style.display = 'none';
-    };
-
-
-
+    var nome_digitado = document.querySelector("#nameImage").value;
+    window.alert("O nome é " + nome_digitado);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // IMPEDINDO A DIGITAÇÃO DE CARACTERES ESPECIAIS
 const nameImage = document.querySelector("#nameImage");
@@ -153,14 +96,12 @@ nameImage.addEventListener("keypress", function(e) {
 
 function checkChar(e) {
     const char = String.fromCharCode(e.keyCode);
-    const pattern = '[a-z, A-Z]';
+    const pattern = '[a-z]';
 
     if (char.match(pattern)) {
         return true;
     };
 };
-
-
 
 
 
@@ -181,43 +122,24 @@ function night_city() {
                 background_filter.classList.remove("hide");
                 break
             case 'minasgerais':                
-                background.setAttribute('src', backgrounds[1]['mg']);
+                background.setAttribute('src', backgrounds[0]['mg']);
                 background_filter.classList.remove("hide");
                 break
             case 'parana':                
-                background.setAttribute('src', backgrounds[2]['pr']);
+                background.setAttribute('src', backgrounds[0]['pr']);
                 background_filter.classList.remove("hide");
                 break
             case 'riodejaneiro':
-                background.setAttribute('src', backgrounds[3]['rj']);
+                background.setAttribute('src', backgrounds[0]['rj']);
                 background_filter.classList.remove("hide");
                 break
             case 'saopaulo':
-                background.setAttribute('src', backgrounds[4]['sp']);
+                background.setAttribute('src', backgrounds[0]['sp']);
                 background_filter.classList.remove("hide");
                 break
             default:
                 break
         };
-
-        switch (selectCity.value) {
-            case backgroundsAdds[0]:
-                background.setAttribute('src', backgroundsAdds[0]);
-                background_filter.classList.remove("hide");
-                break
-            case backgroundsAdds[1]:
-                background.setAttribute('src', backgroundsAdds[1]);
-                background_filter.classList.remove("hide");
-                break
-            case backgroundsAdds[2]:
-                background.setAttribute('src', backgroundsAdds[2]);
-                background_filter.classList.remove("hide");
-                break
-            default:
-                break
-        };
-
-
     });
 
 
@@ -225,16 +147,16 @@ function night_city() {
         background.setAttribute('src', backgrounds[0]['ba']);
         background_filter.classList.remove("hide");
     } else if (selectCity.value === 'minasgerais') {
-        background.setAttribute('src', backgrounds[1]['mg']);
+        background.setAttribute('src', backgrounds[0]['mg']);
         background_filter.classList.remove("hide");        
     } else if (selectCity.value === 'parana') {
-        background.setAttribute('src', backgrounds[2]['pr']);
+        background.setAttribute('src', backgrounds[0]['pr']);
         background_filter.classList.remove("hide");
     } else if (selectCity.value === 'riodejaneiro') {
-        background.setAttribute('src', backgrounds[3]['rj']);
+        background.setAttribute('src', backgrounds[0]['rj']);
         background_filter.classList.remove("hide");
     } else if (selectCity.value === 'saopaulo') {
-        background.setAttribute('src', backgrounds[4]['sp']);
+        background.setAttribute('src', backgrounds[0]['sp']);
         background_filter.classList.remove("hide");
     };
 };
@@ -245,23 +167,19 @@ function day_city() {
         background.setAttribute('src', backgrounds[0]['ba']);
         background_filter.classList.add("hide");
     } else if (selectCity.value === 'minasgerais') {
-        background.setAttribute('src', backgrounds[1]['mg']);
+        background.setAttribute('src', backgrounds[0]['mg']);
         background_filter.classList.add("hide");
     } else if (selectCity.value === 'parana') {
-        background.setAttribute('src', backgrounds[2]['pr']);
+        background.setAttribute('src', backgrounds[0]['pr']);
         background_filter.classList.add("hide");
     } else if (selectCity.value === 'riodejaneiro') {
-        background.setAttribute('src', backgrounds[3]['rj']);
+        background.setAttribute('src', backgrounds[0]['rj']);
         background_filter.classList.add("hide");
     } else if (selectCity.value === 'saopaulo') {
-        background.setAttribute('src', backgrounds[4]['sp']);
+        background.setAttribute('src', backgrounds[0]['sp']);
         background_filter.classList.add("hide");
     };
 };
 
 
-
-
-
-// ====================< FUNCIONAMENTO >====================
 night_city();
